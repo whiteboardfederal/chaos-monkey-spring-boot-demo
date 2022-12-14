@@ -1,7 +1,8 @@
 # Chaos Monkey Spring Boot Demo
 
-This DEMO project is used to run a sample Chaos Experiment with spring boot. Once an experiment has ran, 
-two files will be created: `journal.json` and `chaostoolkit.log`. 
+This DEMO project is used to run a sample Chaos Experiment with spring boot. This application uses both [chaostoolkit](https://chaostoolkit.org/drivers/spring/) and [chaos-monkey-spring-boot](https://github.com/codecentric/chaos-monkey-spring-boot)
+
+Once an experiment has ran, two files will be created: `journal.json` and `chaostoolkit.log`. 
 
 The journal is one potenial output of a chaos engineering experiment. The objective of such journal is to collect all events that took place during the experiment’s run. The journal contains static information, such as the experiment that was run, as well as runtime entries.
 
