@@ -8,10 +8,18 @@ The journal is one potenial output of a chaos engineering experiment. The object
 
 In the event you need to investigate issues, logs will be appended to the `chaostoolkit.log` file. This file contains a lot of traces from the Chaos Toolkit core but also any extensions that used the toolkit’s logger.
 
-## Install Maven Dependencies
+## Install Maven/Gradle Dependencies
 
 ```
-mvn install
+./mvnw install
+```
+```
+./gradlew clean build
+```
+
+## Install Python
+```
+sudo apt-get install python3 python3-venv
 ```
 
 ## Configure Python and ChaosToolKit
@@ -19,16 +27,18 @@ mvn install
 Set virtual environment in python and install `chaostoolkit-spring`
 
 ```
-sudo apt-get install python3 python3-venv
 python3 -m venv ~/.venvs/chaostk
 source  ~/.venvs/chaostk/bin/activate
-pip install -U chaostoolkit-spring
+pip3 install -U chaostoolkit chaostoolkit-spring
 ```
 
 ## Start up Spring Boot
 In a new terminal, start spring boot:
 ```
 ./mvnw spring-boot:run
+```
+```
+./gradlew bootrun
 ```
 
 ## Run the Chaos Experiment
