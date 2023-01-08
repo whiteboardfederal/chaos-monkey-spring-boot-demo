@@ -71,5 +71,9 @@ Output:
 ```
 
 ## REST endpoints
-- `/actuator/chaosmonkey` - Chaos Monkey for Spring Boot
-- `/employee/all` - Return employees from DB (H2)
+
+Spring Boot will launch at [http://localhost:8080](http://localhost:8080)
+
+- [/actuator/chaosmonkey](http://localhost:8080/actuator/chaosmonkey) - Chaos Monkey for Spring Boot
+- [/employee/all](http://localhost:8080/employee/all) - Return employees from DB (H2)
+- [/swagger-ui/index.html](http://localhost:8080/swagger-ui/index.html) - Swagger UI
