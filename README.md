@@ -70,10 +70,23 @@ Output:
 
 ```
 
-## REST endpoints
+## REST Endpoints
 
 Spring Boot will launch at [http://localhost:8080](http://localhost:8080)
 
 - [/actuator/chaosmonkey](http://localhost:8080/actuator/chaosmonkey) - Chaos Monkey for Spring Boot
 - [/employee/all](http://localhost:8080/employee/all) - Return employees from DB (H2)
 - [/swagger-ui/index.html](http://localhost:8080/swagger-ui/index.html) - Swagger UI
+
+## Chaos Monkey REST Endpoints
+| Chaos Monkey URLs | HTTP Methods | Description |
+| --- | --- | ---|
+| [/chaosmonkey](http://localhost:8080/actuator/chaosmonkey) | **GET** | Running Chaos Monkey configuration |
+| [/chaosmonkey/status](http://localhost:8080/actuator/chaosmonkey/status) | **GET** | Is Chaos Monkey enabled or disabled? |
+| [/chaosmonkey/enable](http://localhost:8080/actuator/chaosmonkey/enable) | **POST** | Enable Chaos Monkey |
+| [/chaosmonkey/disable](http://localhost:8080/actuator/chaosmonkey/disable) | **POST** | Disable Chaos Monkey |
+| [/chaosmonkey/watchers](http://localhost:8080/actuator/chaosmonkey/watchers) | **GET** |  Running Watchers configuration |
+| [/chaosmonkey/watchers](http://localhost:8080/actuator/chaosmonkey/watchers) | **POST** | Change Watchers Configuration |
+| [/chaosmonkey/assaults](http://localhost:8080/actuator/chaosmonkey/assults) | **GET** | Running Assaults configuration |
+| [/chaosmonkey/assaults](http://localhost:8080/actuator/chaosmonkey/assults) | **POST** | Change Assaults configuration |
+| [/chaosmonkey/assaults/runtime/attack](http://localhost:8080/actuator/chaosmonkey/attack) | **POST** | Execute configured runtime Assault |
